@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 资讯日报 | 龙虾强 🦞</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lobster: '#FF6B35',
+            dark: '#1a1a2e',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-gray-900 to-gray-800 border-b border-gray-800">
+    <div class="max-w-5xl mx-auto px-4 py-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-4xl">🦞</span>
+          <div>
+            <h1 class="text-2xl font-bold text-white">AI 资讯日报</h1>
+            <p class="text-gray-400 text-sm">每日精选 · 面向 UI 设计师</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <p class="text-gray-400 text-sm">更新时间</p>
+          <p class="text-white font-semibold" id="updateTime">2026-03-13 10:15</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 py-8">
+    <!-- Stats -->
+    <div class="grid grid-cols-3 gap-4 mb-8">
+      <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+        <p class="text-gray-400 text-sm">今日资讯</p>
+        <p class="text-3xl font-bold text-lobster">10</p>
+      </div>
+      <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+        <p class="text-gray-400 text-sm">大模型更新</p>
+        <p class="text-3xl font-bold text-blue-400">5</p>
+      </div>
+      <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+        <p class="text-gray-400 text-sm">科技圈热点</p>
+        <p class="text-3xl font-bold text-purple-400">5</p>
+      </div>
+    </div>
+
+    <!-- Section: 大模型更新 -->
+    <section class="mb-10">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">大模型更新</span>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Item 1 -->
+        <article class="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-colors group">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl">💬</span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                Claude 跨应用协作升级
+              </h3>
+              <p class="text-gray-400 text-sm mb-3">
+                Claude 现在支持在 Excel 和 PowerPoint 之间"携带对话"，不用反复切换标签页。设计师做汇报超实用。
+              </p>
+              <a href="https://www.anthropic.com" target="_blank"
+                 class="inline-flex items-center gap-1 text-blue-400 text-sm hover:text-blue-300 transition-colors">
+                <span>查看原文</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-colors group">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl">🧠</span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                Meta 发布 MTIA 300 AI 芯片
+              </h3>
+              <p class="text-gray-400 text-sm mb-3">
+                新一代自研芯片用于训练 Instagram/Facebook 推荐系统，400-500 代将支持生成式 AI 推理。
+              </p>
+              <a href="https://ai.meta.com/blog/meta-mtia-scale-ai-chips-for-billions/" target="_blank"
+                 class="inline-flex items-center gap-1 text-blue-400 text-sm hover:text-blue-300 transition-colors">
+                <span>查看原文</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-colors group">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl">🌐</span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                Google Gemini 登陆更多国家
+              </h3>
+              <p class="text-gray-400 text-sm mb-3">
+                Chrome 内置 Gemini 新增加拿大、新西兰、印度，支持 50+ 语言。能分析屏幕内容、帮写 Gmail、生成表格对比。
+              </p>
+              <a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank"
+                 class="inline-flex items-center gap-1 text-blue-400 text-sm hover:text-blue-300 transition-colors">
+                <span>查看原文</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4 -->
+        <article class="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-colors group">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl">⚔️</span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                Anthropic 与 Pentagon 谈判破裂
+              </h3>
+              <p class="text-gray-400 text-sm mb-3">
+                五角大楼表示"谈判结束"，Anthropic 此前拒绝向军方提供 AI 技术的争议告一段落。
+              </p>
+              <a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank"
+                 class="inline-flex items-center gap-1 text-blue-400 text-sm hover:text-blue-300 transition-colors">
+                <span>查看原文</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 5 -->
+        <article class="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-colors group">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl">💰</span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                Yann LeCun 创业公司融资 $1B
+              </h3>
+              <p class="text-gray-400 text-sm mb-3">
+                AI "教父"在巴黎创立的公司 Advance Machine Intelligence 获得 10 亿美元融资，要做 AI 世界模型。
+              </p>
+              <a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank"
+                 class="inline-flex items-center gap-1 text-blue-400 text-sm hover:text-blue-300 transition-colors">
+                <span>查看原文</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section: 科技圈热点 -->
+    <section class="mb-10">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium">科技圈热点</span>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Item 6 -->
+        <article class="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-colors group">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl">🎨</span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                Adobe CEO 卸任
+              </h3>
+              <p class="text-gray-400 text-sm mb-3">
+                Shantanu Narayen 执掌 18 年后卸任，新时代创意工作流正在被 AI 重塑。设计师们该关注了。
+              </p>
+              <a href="https://www.theverge.com/" target="_blank"
+                 class="inline-flex items-center gap-1 text-purple-400 text-sm hover:text-purple-300 transition-colors">
+                <span>查看原文</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 7 -->
+        <article class="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-colors group">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl">🗣️</span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                Alexa Plus 新增 "Sassy" 个性
+              </h3>
+              <p class="text-gray-400 text-sm mb-3">
+                Amazon 推出"毒舌"风格语音助手，带有俏皮讽刺和偶尔爆粗。需额外验证，仅限成人。
+              </p>
+              <a href="https://www.aboutamazon.com/news/devices/alexa-plus-personality-styles" target="_blank"
+                 class="inline-flex items-center gap-1 text-purple-400 text-sm hover:text-purple-300 transition-colors">
+                <span>查看原文</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 8 -->
+        <article class="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-colors group">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl">🎬</span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                Ben Affleck AI 公司被 Netflix 收购
+              </h3>
+              <p class="text-gray-400 text-sm mb-3">
+                金额约 $6 亿。Ben Affleck 的 AI 创业公司采用了不同于其他生成式 AI 公司的方法。
+              </p>
+              <a href="https://www.theverge.com/" target="_blank"
+                 class="inline-flex items-center gap-1 text-purple-400 text-sm hover:text-purple-300 transition-colors">
+                <span>查看原文</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 9 -->
+        <article class="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-colors group">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl">📸</span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                Google Photos 将推"经典模式"
+              </h3>
+              <p class="text-gray-400 text-sm mb-3">
+                用户可选择禁用 AI 搜索，改回传统模式。之前 AI 搜索延迟问题让用户不满。
+              </p>
+              <a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank"
+                 class="inline-flex items-center gap-1 text-purple-400 text-sm hover:text-purple-300 transition-colors">
+                <span>查看原文</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 10 -->
+        <article class="bg-gray-900 rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-colors group">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl">🗺️</span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                Niantic 地图数据商业化
+              </h3>
+              <p class="text-gray-400 text-sm mb-3">
+                Pokemon Go 积累的世界 AR 地图数据找到首个客户。对空间计算/AR 设计有参考价值。
+              </p>
+              <a href="https://www.theverge.com/" target="_blank"
+                 class="inline-flex items-center gap-1 text-purple-400 text-sm hover:text-purple-300 transition-colors">
+                <span>查看原文</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 pt-6 mt-10">
+      <div class="flex items-center justify-between text-gray-500 text-sm">
+        <div class="flex items-center gap-2">
+          <span>🦞</span>
+          <span>由龙虾强自动生成</span>
+        </div>
+        <div>
+          <span>每日更新 · 早上 10:00</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Auto update time
+    const now = new Date();
+    document.getElementById('updateTime').textContent = now.toLocaleString('zh-CN', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  </script>
+</body>
+</html>
