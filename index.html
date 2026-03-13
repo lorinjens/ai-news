@@ -12,10 +12,6 @@
           colors: {
             lobster: '#FF6B35',
             apple: '#2997ff',
-            appleDark: '#1d1d1f',
-          },
-          fontFamily: {
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
           }
         }
       }
@@ -26,31 +22,22 @@
     html { scroll-behavior: smooth; }
     body { 
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: #000;
-      color: #f5f5f7;
+      background: #f5f5f7;
+      color: #1d1d1f;
     }
     .hero-gradient {
-      background: linear-gradient(180deg, #1d1d1f 0%, #000 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+    }
+    .card {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     .card-hover {
       transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     }
     .card-hover:hover {
-      transform: scale(1.02);
-      background: #1d1d1f;
-    }
-    .text-gradient {
-      background: linear-gradient(90deg, #2997ff, #bf5af2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .btn-apple {
-      background: #2997ff;
-      transition: all 0.3s ease;
-    }
-    .btn-apple:hover {
-      background: #0071e3;
+      transform: scale(1.01);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     }
     .fade-in {
       animation: fadeIn 0.8s ease-out forwards;
@@ -65,56 +52,49 @@
     .stagger-3 { animation-delay: 0.3s; }
     .stagger-4 { animation-delay: 0.4s; }
     .stagger-5 { animation-delay: 0.5s; }
-    .date-tag {
-      background: rgba(41, 151, 255, 0.15);
-      color: #2997ff;
-    }
     .date-inline {
       font-size: 12px;
       color: #86868b;
     }
   </style>
 </head>
-<body class="bg-black text-white">
+<body class="bg-gray-100 text-gray-900">
   <!-- Hero Section -->
-  <section class="hero-gradient min-h-[50vh] flex items-center justify-center relative overflow-hidden">
-    <div class="absolute inset-0 opacity-30">
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-blue-500/20 to-transparent rounded-full"></div>
-    </div>
+  <section class="hero-gradient min-h-[40vh] flex items-center justify-center relative overflow-hidden border-b border-gray-200">
     <div class="text-center px-4 relative z-10">
       <p class="text-apple text-sm font-medium mb-4 fade-in">每日更新 · 早上 10:00</p>
-      <h1 class="text-5xl md:text-7xl font-semibold mb-4 fade-in stagger-1" style="animation-fill-mode: forwards;">
+      <h1 class="text-5xl md:text-7xl font-semibold mb-4 fade-in stagger-1" style="animation-fill-mode: forwards; color: #1d1d1f;">
         AI 设计资讯
       </h1>
-      <p class="text-xl md:text-2xl text-gray-400 fade-in stagger-2" style="animation-fill-mode: forwards;">
+      <p class="text-xl md:text-2xl text-gray-500 fade-in stagger-2" style="animation-fill-mode: forwards;">
         面向 UI 设计师的每日资讯精选
       </p>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="max-w-5xl mx-auto px-4 py-20">
+  <main class="max-w-5xl mx-auto px-4 py-16">
     
     <!-- Section: Figma 动态 -->
-    <section class="mb-24">
-      <div class="flex items-center gap-3 mb-10">
+    <section class="mb-16">
+      <div class="flex items-center gap-3 mb-8">
         <span class="w-3 h-3 bg-purple-500 rounded-full"></span>
-        <h2 class="text-3xl font-semibold">Figma 动态</h2>
+        <h2 class="text-2xl font-semibold" style="color: #1d1d1f;">Figma 动态</h2>
       </div>
 
       <div class="grid gap-4">
         <!-- Item 1 -->
-        <article class="card-hover bg-[#161617] rounded-2xl p-8 border border-gray-800/50 fade-in stagger-1" style="animation-fill-mode: forwards;">
-          <div class="flex items-start gap-6">
-            <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">🎨</div>
+        <article class="card card-hover rounded-2xl p-6 fade-in stagger-1" style="animation-fill-mode: forwards;">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🎨</div>
             <div class="flex-1">
               <span class="date-inline">2026-03-05</span>
-              <h3 class="text-xl font-semibold mb-2">Figma Make 正式发布</h3>
-              <p class="text-gray-400 mb-4 leading-relaxed">
+              <h3 class="text-lg font-semibold mb-2" style="color: #1d1d1f;">Figma Make 正式发布</h3>
+              <p class="text-gray-500 mb-3 leading-relaxed">
                 提示词直接生成可交互原型，无边界探索创意。AI 原型生成器让设计更快。
               </p>
               <a href="https://www.figma.com/make/" target="_blank" 
-                 class="inline-flex items-center gap-2 text-apple hover:underline">
+                 class="inline-flex items-center gap-2 text-apple hover:underline text-sm">
                 <span>查看原文</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -125,17 +105,17 @@
         </article>
 
         <!-- Item 2 -->
-        <article class="card-hover bg-[#161617] rounded-2xl p-8 border border-gray-800/50 fade-in stagger-2" style="animation-fill-mode: forwards;">
-          <div class="flex items-start gap-6">
-            <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">🌐</div>
+        <article class="card card-hover rounded-2xl p-6 fade-in stagger-2" style="animation-fill-mode: forwards;">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🌐</div>
             <div class="flex-1">
               <span class="date-inline">2026-03-10</span>
-              <h3 class="text-xl font-semibold mb-2">Figma Sites 新增 Code Layers</h3>
-              <p class="text-gray-400 mb-4 leading-relaxed">
+              <h3 class="text-lg font-semibold mb-2" style="color: #1d1d1f;">Figma Sites 新增 Code Layers</h3>
+              <p class="text-gray-500 mb-3 leading-relaxed">
                 无代码创建交互动画，Figma Sites 可以直接做动态网站了。
               </p>
               <a href="https://www.figma.com/sites/" target="_blank" 
-                 class="inline-flex items-center gap-2 text-apple hover:underline">
+                 class="inline-flex items-center gap-2 text-apple hover:underline text-sm">
                 <span>查看原文</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -146,17 +126,17 @@
         </article>
 
         <!-- Item 3 -->
-        <article class="card-hover bg-[#161617] rounded-2xl p-8 border border-gray-800/50 fade-in stagger-3" style="animation-fill-mode: forwards;">
-          <div class="flex items-start gap-6">
-            <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">🔌</div>
+        <article class="card card-hover rounded-2xl p-6 fade-in stagger-3" style="animation-fill-mode: forwards;">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🔌</div>
             <div class="flex-1">
               <span class="date-inline">2026-03-08</span>
-              <h3 class="text-xl font-semibold mb-2">Figma MCP Server 发布</h3>
-              <p class="text-gray-400 mb-4 leading-relaxed">
+              <h3 class="text-lg font-semibold mb-2" style="color: #1d1d1f;">Figma MCP Server 发布</h3>
+              <p class="text-gray-500 mb-3 leading-relaxed">
                 把 Figma 设计上下文直接带入 VS Code/Cursor/Claude，加速设计到代码流程。
               </p>
               <a href="https://www.figma.com/developers" target="_blank" 
-                 class="inline-flex items-center gap-2 text-apple hover:underline">
+                 class="inline-flex items-center gap-2 text-apple hover:underline text-sm">
                 <span>查看原文</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -167,17 +147,17 @@
         </article>
 
         <!-- Item 4 -->
-        <article class="card-hover bg-[#161617] rounded-2xl p-8 border border-gray-800/50 fade-in stagger-4" style="animation-fill-mode: forwards;">
-          <div class="flex items-start gap-6">
-            <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">🖌️</div>
+        <article class="card card-hover rounded-2xl p-6 fade-in stagger-4" style="animation-fill-mode: forwards;">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🖌️</div>
             <div class="flex-1">
               <span class="date-inline">2026-03-01</span>
-              <h3 class="text-xl font-semibold mb-2">Figma Draw 手绘应用上线</h3>
-              <p class="text-gray-400 mb-4 leading-relaxed">
+              <h3 class="text-lg font-semibold mb-2" style="color: #1d1d1f;">Figma Draw 手绘应用上线</h3>
+              <p class="text-gray-500 mb-3 leading-relaxed">
                 全新手绘工具，支持 Apple Pencil 直连设计师创作。
               </p>
               <a href="https://www.figma.com/draw/" target="_blank" 
-                 class="inline-flex items-center gap-2 text-apple hover:underline">
+                 class="inline-flex items-center gap-2 text-apple hover:underline text-sm">
                 <span>查看原文</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -188,17 +168,17 @@
         </article>
 
         <!-- Item 5 -->
-        <article class="card-hover bg-[#161617] rounded-2xl p-8 border border-gray-800/50 fade-in stagger-5" style="animation-fill-mode: forwards;">
-          <div class="flex items-start gap-6">
-            <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">🏗️</div>
+        <article class="card card-hover rounded-2xl p-6 fade-in stagger-5" style="animation-fill-mode: forwards;">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🏗️</div>
             <div class="flex-1">
               <span class="date-inline">2026-03-05</span>
-              <h3 class="text-xl font-semibold mb-2">Figma 设计系统 Slots 功能</h3>
-              <p class="text-gray-400 mb-4 leading-relaxed">
+              <h3 class="text-lg font-semibold mb-2" style="color: #1d1d1f;">Figma 设计系统 Slots 功能</h3>
+              <p class="text-gray-500 mb-3 leading-relaxed">
                 可自定义组件而不破坏系统，5 个实战技巧帮你解锁更多自由。
               </p>
               <a href="https://www.figma.com/blog/supercharge-your-design-system-with-slots/" target="_blank" 
-                 class="inline-flex items-center gap-2 text-apple hover:underline">
+                 class="inline-flex items-center gap-2 text-apple hover:underline text-sm">
                 <span>查看原文</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -211,25 +191,25 @@
     </section>
 
     <!-- Section: AI 生图 & 设计工具 -->
-    <section class="mb-24">
-      <div class="flex items-center gap-3 mb-10">
+    <section class="mb-16">
+      <div class="flex items-center gap-3 mb-8">
         <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
-        <h2 class="text-3xl font-semibold">AI 生图 & 设计工具</h2>
+        <h2 class="text-2xl font-semibold" style="color: #1d1d1f;">AI 生图 & 设计工具</h2>
       </div>
 
       <div class="grid gap-4">
         <!-- Item 6 -->
-        <article class="card-hover bg-[#161617] rounded-2xl p-8 border border-gray-800/50 fade-in stagger-1" style="animation-fill-mode: forwards;">
-          <div class="flex items-start gap-6">
-            <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">🖼️</div>
+        <article class="card card-hover rounded-2xl p-6 fade-in stagger-1" style="animation-fill-mode: forwards;">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🖼️</div>
             <div class="flex-1">
               <span class="date-inline">2026-03-12</span>
-              <h3 class="text-xl font-semibold mb-2">Figma AI 图像生成升级</h3>
-              <p class="text-gray-400 mb-4 leading-relaxed">
+              <h3 class="text-lg font-semibold mb-2" style="color: #1d1d1f;">Figma AI 图像生成升级</h3>
+              <p class="text-gray-500 mb-3 leading-relaxed">
                 支持 Gemini 3.0 Pro 和 OpenAI GPT Image 1，可直接在 Figma 内生成和编辑图像。
               </p>
               <a href="https://www.figma.com/ai/" target="_blank" 
-                 class="inline-flex items-center gap-2 text-apple hover:underline">
+                 class="inline-flex items-center gap-2 text-apple hover:underline text-sm">
                 <span>查看原文</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -240,17 +220,17 @@
         </article>
 
         <!-- Item 7 -->
-        <article class="card-hover bg-[#161617] rounded-2xl p-8 border border-gray-800/50 fade-in stagger-2" style="animation-fill-mode: forwards;">
-          <div class="flex items-start gap-6">
-            <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">🏷️</div>
+        <article class="card card-hover rounded-2xl p-6 fade-in stagger-2" style="animation-fill-mode: forwards;">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🏷️</div>
             <div class="flex-1">
               <span class="date-inline">2026-03-12</span>
-              <h3 class="text-xl font-semibold mb-2">Figma 自动命名图层</h3>
-              <p class="text-gray-400 mb-4 leading-relaxed">
+              <h3 class="text-lg font-semibold mb-2" style="color: #1d1d1f;">Figma 自动命名图层</h3>
+              <p class="text-gray-500 mb-3 leading-relaxed">
                 一键按上下文重命名整理所有图层，团队协作更高效。
               </p>
               <a href="https://www.figma.com/ai/" target="_blank" 
-                 class="inline-flex items-center gap-2 text-apple hover:underline">
+                 class="inline-flex items-center gap-2 text-apple hover:underline text-sm">
                 <span>查看原文</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -261,17 +241,17 @@
         </article>
 
         <!-- Item 8 -->
-        <article class="card-hover bg-[#161617] rounded-2xl p-8 border border-gray-800/50 fade-in stagger-3" style="animation-fill-mode: forwards;">
-          <div class="flex items-start gap-6">
-            <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">📊</div>
+        <article class="card card-hover rounded-2xl p-6 fade-in stagger-3" style="animation-fill-mode: forwards;">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">📊</div>
             <div class="flex-1">
               <span class="date-inline">2026-03-11</span>
-              <h3 class="text-xl font-semibold mb-2">FigJam AI 全面升级</h3>
-              <p class="text-gray-400 mb-4 leading-relaxed">
+              <h3 class="text-lg font-semibold mb-2" style="color: #1d1d1f;">FigJam AI 全面升级</h3>
+              <p class="text-gray-500 mb-3 leading-relaxed">
                 自动将复杂想法转为图表、分类反馈、自动化繁琐任务，头脑风暴神器。
               </p>
               <a href="https://www.figma.com/figjam/" target="_blank" 
-                 class="inline-flex items-center gap-2 text-apple hover:underline">
+                 class="inline-flex items-center gap-2 text-apple hover:underline text-sm">
                 <span>查看原文</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -282,17 +262,17 @@
         </article>
 
         <!-- Item 9 -->
-        <article class="card-hover bg-[#161617] rounded-2xl p-8 border border-gray-800/50 fade-in stagger-4" style="animation-fill-mode: forwards;">
-          <div class="flex items-start gap-6">
-            <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">📱</div>
+        <article class="card card-hover rounded-2xl p-6 fade-in stagger-4" style="animation-fill-mode: forwards;">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">📱</div>
             <div class="flex-1">
               <span class="date-inline">2026-03-10</span>
-              <h3 class="text-xl font-semibold mb-2">Figma AI App Builder</h3>
-              <p class="text-gray-400 mb-4 leading-relaxed">
+              <h3 class="text-lg font-semibold mb-2" style="color: #1d1d1f;">Figma AI App Builder</h3>
+              <p class="text-gray-500 mb-3 leading-relaxed">
                 AI 生成完整 APP，提示词描述需求即可生成可运行的应用原型。
               </p>
               <a href="https://www.figma.com/solutions/ai-app-builder/" target="_blank" 
-                 class="inline-flex items-center gap-2 text-apple hover:underline">
+                 class="inline-flex items-center gap-2 text-apple hover:underline text-sm">
                 <span>查看原文</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -303,17 +283,17 @@
         </article>
 
         <!-- Item 10 -->
-        <article class="card-hover bg-[#161617] rounded-2xl p-8 border border-gray-800/50 fade-in stagger-5" style="animation-fill-mode: forwards;">
-          <div class="flex items-start gap-6">
-            <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">💬</div>
+        <article class="card card-hover rounded-2xl p-6 fade-in stagger-5" style="animation-fill-mode: forwards;">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">💬</div>
             <div class="flex-1">
               <span class="date-inline">2026-03-11</span>
-              <h3 class="text-xl font-semibold mb-2">Claude 跨应用协作升级</h3>
-              <p class="text-gray-400 mb-4 leading-relaxed">
+              <h3 class="text-lg font-semibold mb-2" style="color: #1d1d1f;">Claude 跨应用协作升级</h3>
+              <p class="text-gray-500 mb-3 leading-relaxed">
                 Claude 现在支持 Excel 和 PowerPoint 对话，设计师做汇报更高效。
               </p>
               <a href="https://www.anthropic.com" target="_blank" 
-                 class="inline-flex items-center gap-2 text-apple hover:underline">
+                 class="inline-flex items-center gap-2 text-apple hover:underline text-sm">
                 <span>查看原文</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -327,7 +307,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-800 py-12">
+  <footer class="border-t border-gray-200 py-8 bg-white">
     <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <span class="text-2xl">🦞</span>
